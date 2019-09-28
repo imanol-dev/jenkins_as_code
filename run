@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker run -d --name jenkins_as_code -v ${PWD}/jenkins_home:/var/jenkins_home -p 8080:8080 --env-file "config/runtime.env" jenkins_as_code:0.1.0

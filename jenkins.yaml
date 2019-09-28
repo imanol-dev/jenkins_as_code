@@ -1,0 +1,21 @@
+---
+jenkins:
+  systemMessage: "Jenkins As Code Concept."
+  views:
+    - myView:
+        name: "Jobs Config as Code"
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+jobs:
+  - script: >
+      freeStyleJob("Jobs Generator") {
+        scm {
+            github('imanol-dev/jenkins_as_code_jobs', 'master')
+        }
+        steps {
+            dsl {
+              external('*.groovy')
+            }
+        }
+      }

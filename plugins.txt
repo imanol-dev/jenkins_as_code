@@ -1,0 +1,6 @@
+workflow-aggregator:2.6
+configuration-as-code:1.30
+configuration-as-code-support:1.18
+credentials:2.3.0
+blueocean:1.19.0
+job-dsl:1.74

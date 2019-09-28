@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build -t jenkins_as_code:0.1.0 .
